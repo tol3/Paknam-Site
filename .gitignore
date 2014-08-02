@@ -5,11 +5,9 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore bundler config
-<<<<<<< HEAD
-
-=======
->>>>>>> e3f6d357929fbf93015f4d86665916fa0e43ff3d
 .bundle
+
+vendor/bundle/*
 
 # Ignore the default SQLite database.
 db/*.sqlite3
@@ -24,7 +22,7 @@ public/uploads
 # sass
 .sass-cache
 .sass-cache/*
-vendor/*
+
 vendor/extensions/**/spec/dummy
 
 # Rails
@@ -50,8 +48,4 @@ public/stylesheets/cache
 public/refinery/*
 
 # Vendor Cache
-<<<<<<< HEAD
 vendor/cache
-=======
-vendor/cache
->>>>>>> e3f6d357929fbf93015f4d86665916fa0e43ff3d
