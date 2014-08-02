@@ -1,0 +1,31 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header{	
+
+	.navbar{
+		max-width: 970px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30px;
+		
+		#soc{
+			margin-top: -10px;
+		}
+
+		li{
+			a{
+				padding: 15px 10px;
+				font-size: 1.1em;
+			}
+		}
+		.navbar-header{
+			position: absolute;
+			top: -105px;
+		}
+		.navbar-collapse{
+			margin-left: 170px;
+		}
+	}
+}
