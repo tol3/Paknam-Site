@@ -1,0 +1,155 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require bootstrap
+ */
+
+ body{
+ 	background-color: rgb(10, 18, 3) !important;
+ }
+
+.head-title{
+	margin-bottom: 20px;
+	border-top-right-radius: 30px;
+	
+	h3{
+		text-align: center;
+		color: white;
+	}
+}
+
+.add-bg{
+	background-image: url(bg.png);
+}
+
+.featured-title{
+	background: url(shadow-divider.png) no-repeat center center;
+	margin-bottom: 5px;
+	.ribbon{
+		margin: 0px auto;
+		display: table;
+		color: #f2f2f2;
+		line-height: 59px;
+		padding-left: 49px;
+		font-size: 20px;
+		background: url(ribbon.png) no-repeat top left;
+		text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+		span{
+			background: url(ribbon.png) no-repeat bottom right;
+			display: block;
+			line-height: 59px;
+			padding-right: 49px;
+		}
+	}
+}
+
+.huhu{
+	margin-top: -460px;
+	background-image: url(wrapper-bg.png);
+	background-repeat: no-repeat;
+	// background-size: 80% 100%;
+    background-position: top;
+}
+
+.ss{
+	background-image: url(bg.png);
+}
+
+
+
+.custom-col{
+	width: 980px !important;
+	// margin: 0 20px !important;
+	// margin-left: 11.4% !important;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	.row{
+		background-image: url(bg.png);
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+
+.content{
+	text-align: center;
+}
+
+img.img-dummy{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.img-dummy2{
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ .dum1{
+ 	height: 255px;
+ 	border: dotted 1px gray;
+ 	margin-bottom: 20px;
+ 	padding-left: 0px !important;
+ 	padding-right: 0px !important;
+ 	img{
+ 		display: block;
+ 		width: 100%;
+ 	}
+ }
+
+ .bot{
+ 	padding-bottom: 60px;
+padding-top: 20px;
+ }
+
+ .first{
+ 	// margin-top: 100px;
+ 	padding-top: 40px;
+ }
+
+.mar{
+	margin-top: 20px;
+	font-size: 1.5em;
+}
+
+ div.wraper{
+ 	background-image: url(rainbow1.jpg);
+ 	background-size: 100% 100%;
+ 	background-position: top center;
+ 	background-repeat: no-repeat;
+ 	// height: 100%;
+ 	// position: absolute;
+ 	// top: -21px;
+ 	height: 640px;
+ }
+
+	.row{
+		margin-right: 0px !important;
+		margin-left: 0px !important;
+	}
+footer{
+	border-top: gray solid 4px; 
+	.row{
+		margin-right: 0px;
+		margin-left: 0px;
+		background-color: brown;
+	}
+
+	div{
+		text-align: center;
+		color: white;	
+	}
+}
