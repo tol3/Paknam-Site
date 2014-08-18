@@ -18,7 +18,11 @@ ActiveAdmin.setup do |config|
   # Note: Recommended image height is 21px to properly fit in the header
   #
   # config.site_title_image = "/images/logo.png"
-
+  config.namespace :admin do |admin|
+    admin.build_menu  do |menu|
+      menu.add :label => "Paknam Site", :url => "/", :priority => 0
+    end
+  end
   # == Default Namespace
   #
   # Set the default namespace each administration resource
@@ -121,7 +125,7 @@ ActiveAdmin.setup do |config|
   # config.allow_comments = false
   #
   # You can disable the menu item for the comments index page:
-  # config.show_comments_in_menu = false
+  config.show_comments_in_menu = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'

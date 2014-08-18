@@ -53,6 +53,11 @@ PaknamSiteV2::Application.routes.draw do
   match "forum" => "forum#show"
 #
 
+  resources :event
+  resources :document
+  resources :announcement
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

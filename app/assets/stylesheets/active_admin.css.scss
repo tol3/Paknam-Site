@@ -10,6 +10,26 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic);
+
+
+$skinLogo: url("dum.jpg") no-repeat center center;
+
+$skinActiveColor: #67917A; //green
+$skinHeaderBck: #333; // black
+$panelHeaderBck: #333; // black
+
+$skinTextColor: #555; // ???
+$skinTextActiveColor: #fff; // white
+$skinTextTable: #333; // black
+
+
+@import "active_skin";
+
+html{
+	font-family: 'Lato', sans-serif;
+	font-size: 18px !important;
+}
 
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:

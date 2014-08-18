@@ -1,8 +1,15 @@
 class Document < ActiveRecord::Base
 
-	attr_accessible :title, :category, :file, :publish
+  scope :on, where(publish: true).order("created_at desc")
 
-	mount_uploader :file, FileUploader
+  scope :forum, where('category = ? AND publish = ?', "หนังสือราชกาล", true )
+  scope :meeting, where('category = ? AND publish = ?', "รายงานประชุม", true )
+  scope :finance, where('category = ? AND publish = ?', "รายงานการเงิน", true )
+  
+
+  attr_accessible :title, :category, :file, :publish
+
+  mount_uploader :file, FileUploader
 	
   structure do
     title   :string
