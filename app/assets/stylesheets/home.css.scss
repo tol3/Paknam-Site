@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 header{
 .navbar{
+	
 max-width: 970px;
 display: block;
 margin-left: auto;
 margin-right: auto;
 margin-top: 30px;
-
 #soc{
 margin-top: -10px;
 }
@@ -37,11 +37,9 @@ text-align: center;
 li{
 background-color: #444;
 width: 33.33%;
-
 a{
-	margin-right: 0 ;
-	margin-left: 0; 
-
+margin-right: 0 ;
+margin-left: 0;
 color: white;
 }
 a:hover{
@@ -49,4 +47,12 @@ background-color: white;
 color: #333;
 }
 }
+}
+
+
+
+footer{
+	.row{
+		background-color: #333;
+	}
 }
