@@ -1,4 +1,5 @@
 ActiveAdmin.register Document do
+menu false
 
   scope :all
   # ["หนังสือราชกาล","รายงานประชุม","รายงานการเงิน"]

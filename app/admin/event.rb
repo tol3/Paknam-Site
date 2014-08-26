@@ -1,4 +1,5 @@
 ActiveAdmin.register Event do
+menu false
 
   index do
     selectable_column

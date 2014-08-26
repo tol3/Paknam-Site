@@ -1,4 +1,5 @@
 ActiveAdmin.register Announcement do
+menu false
 
   scope :all
   # ["หนังสือราชกาล","รายงานประชุม","รายงานการเงิน"]

@@ -21,8 +21,16 @@ ActiveAdmin.setup do |config|
   config.namespace :admin do |admin|
     admin.build_menu  do |menu|
       menu.add :label => "Paknam Site", :url => "/", :priority => 0
+
+      menu.add :label => "Dashboard", :url => "/admin/dashboard", :priority => 1
+      menu.add :label => "ข่าวสาร ต่างๆ ", :url => "/admin/announcements", :priority => 2
+      menu.add :label => "หนังสือ และ รายงาน", :url => "/admin/documents", :priority => 3
+      menu.add :label => "กิจกรรม", :url => "/admin/events", :priority => 4
+      menu.add :label => "Admin User", :url => "/admin/admin_users", :priority => 5
+
     end
   end
+
   # == Default Namespace
   #
   # Set the default namespace each administration resource
