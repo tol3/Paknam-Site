@@ -1,7 +1,13 @@
 ActiveAdmin.register Document do
-menu false
+# menu false
+menu :label =>  "หนังสือ และ รายงาน", :priority => 3
 
-  scope :all
+  # scope :all
+
+  scope :'ทั้งหมด' do |task|
+    task
+  end
+  
   # ["หนังสือราชกาล","รายงานประชุม","รายงานการเงิน"]
   scope :'หนังสือราชกาล' do |task|
     task.where('category = ?', "หนังสือราชกาล")
@@ -13,7 +19,7 @@ menu false
     task.where('category = ?', "รายงานการเงิน")
   end
 
-  index do
+  index :title => "หนังสือ และ รายงาน" do
     selectable_column
 
     column "title", :sortable => :title do |p|

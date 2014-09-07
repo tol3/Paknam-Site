@@ -1,7 +1,8 @@
 ActiveAdmin.register Event do
-menu false
+# menu false
+menu :label =>  "กิจกรรม", :priority => 4
 
-  index do
+  index :title => "กิจกรรม" do
     selectable_column
 
     column "Picture", :event_images_id do |p|

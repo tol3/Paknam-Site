@@ -12,6 +12,23 @@
 @import "active_admin/base";
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic);
 
+.wysihtml5-sandbox{
+	width: 100% !important;
+	height: 450px !important;
+	margin-left: -65px !important;
+}
+
+.activeadmin-wysihtml5-modal{
+	top: 20px !important;
+}
+
+.bootstrap-tagsinput {
+	width: 75%;
+	.tag {
+		margin-right: 2px;
+		color: white;
+	}
+}
 
 $skinLogo: url("dum.jpg") no-repeat center center;
 

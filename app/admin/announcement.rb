@@ -1,7 +1,15 @@
 ActiveAdmin.register Announcement do
-menu false
+# menu false
+ menu :label =>  "ข่าวสารต่าง ๆ", :priority => 2
 
-  scope :all
+# title "Hello"
+
+  # scope :all
+  
+  scope :'ทั้งหมด' do |task|
+    task
+  end
+
   # ["หนังสือราชกาล","รายงานประชุม","รายงานการเงิน"]
   scope :'ข่าวประชาสัมพันธ์' do |task|
     task.where('category = ?', "ข่าวประชาสัมพันธ์")
@@ -13,7 +21,7 @@ menu false
     task.where('category = ?', "ข่าวสมัครงาน")
   end
 
-  index do
+  index :title => "ข่าวสารต่าง ๆ"  do
     selectable_column
 
     column "title", :sortable => :title do |p|

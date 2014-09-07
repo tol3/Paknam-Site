@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140818171214) do
+ActiveRecord::Schema.define(:version => 20140907154253) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -54,6 +54,20 @@ ActiveRecord::Schema.define(:version => 20140818171214) do
     t.boolean  "publish"
     t.datetime "updated_at"
     t.datetime "created_at"
+  end
+
+  create_table "assets", :force => true do |t|
+    t.string   "storage_uid"
+    t.string   "storage_name"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.integer  "storage_width"
+    t.integer  "storage_height"
+    t.float    "storage_aspect_ratio"
+    t.integer  "storage_depth"
+    t.string   "storage_format"
+    t.string   "storage_mime_type"
+    t.string   "storage_size"
   end
 
   create_table "documents", :force => true do |t|

@@ -1,6 +1,6 @@
 ActiveAdmin.register_page "Dashboard" do
-    menu false
-
+    # menu false
+    menu :label =>  "Dash Board", :priority => 1
 
   # menu :priority => 1, :label => proc{ I18n.t("active_admin.dashboard") }
 
