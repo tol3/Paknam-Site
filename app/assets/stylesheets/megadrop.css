@@ -9,9 +9,9 @@ a { color: #666; text-decoration: none;}
 background: #666;
 border-radius: 3px;
 width: 700px;
-margin: 35px auto;
+margin: 40px auto 20px auto;
 height: 43px;
-
+padding-left: 0;
 }
 
 .nav li { list-style: none;  }
@@ -40,9 +40,10 @@ height: 43px;
 	top: 43px;
 	display: none;
 	background: #333;
-	padding: 10px 10px;
+	padding: 10px 0 0px 0;
 	box-shadow: 0 2px 3px rgba(0,0,0,0.1);
-	overflow: none;
+	overflow: auto;
+	z-index: 1;
 }
 .nav > li > div p { color: #666; }
 .nav > li > div.right { right: 0; left: auto }

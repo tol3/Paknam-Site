@@ -17,8 +17,25 @@
  	background-color: rgb(10, 18, 3) !important;
  }
 
+.item{
+	img{
+		width: 100%;	
+	}
+	max-height: 370px;
+}
+
+.head-box{
+	border-top-left-radius: 50%;
+ 	border-top-right-radius: 50%;
+ 	background-image: url(ok-bg.png);
+	// background-repeat: no-repeat;
+	// background-size: 80% 100%;
+    background-position: top;
+    margin-bottom: 10px;
+}
+
 .head-title{
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	border-top-right-radius: 30px;
 	
 	h3{
@@ -27,8 +44,33 @@
 	}
 }
 
-.add-bg{
-	background-image: url(bg.png);
+.head-icon{
+	z-index: 1;
+	a{
+		img{
+			width: 100%;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: -70px;
+			// position: absolute;
+			// top: -65px;
+		}
+	}
+}
+
+.menu{
+	margin-left: 85px !important;
+}
+
+.soc{
+	position: absolute;
+	margin-top: 40px;
+	a{
+
+// 		float: left;
+// 		margin-right: 10px;
+	}
 }
 
 .featured-title{
@@ -54,37 +96,24 @@
 
 .huhu{
 	margin-top: -460px;
-	background-image: url(wrapper-bg.png);
-	background-repeat: no-repeat;
-	// background-size: 80% 100%;
-    background-position: top;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .ss{
+	padding-top: 0px;
+	margin-top: -15px;
 	background-image: url(bg.png);
 }
 
-
-.col-sm-8{
-	width: 980px !important;
-	// margin: 0 20px !important;
-	margin-left: 11.4% !important;
+.box-last{
+	margin-bottom: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: url(box-bot.png) no-repeat top;
+	background-size: 100% 100%;
 }
-.custom-col{
-	width: 980px !important;
-	// margin: 0 20px !important;
-	// margin-left: 11.4% !important;
-
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	.row{
-		background-image: url(bg.png);
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-}
-
 
 .content{
 	text-align: center;
@@ -94,12 +123,7 @@ img.img-dummy{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-img.img-dummy2{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
 }
 
  .dum1{
@@ -115,8 +139,10 @@ img.img-dummy2{
  }
 
  .bot{
- 	padding-bottom: 60px;
-padding-top: 20px;
+ 	padding-bottom: 10px;
+	padding-top: 20px;
+	background: url(bg-foot.png) !important;
+	margin-bottom: 10px;
  }
 
  .first{
@@ -130,7 +156,7 @@ padding-top: 20px;
 }
 
  div.wraper{
- 	background-image: url(rainbow1.jpg);
+ 	background-image: url(bg.jpg);
  	background-size: 100% 100%;
  	background-position: top center;
  	background-repeat: no-repeat;
@@ -139,11 +165,14 @@ padding-top: 20px;
  	// top: -21px;
  	height: 640px;
  }
-
-	.row{
-		margin-right: 0px !important;
-		margin-left: 0px !important;
-	}
+.space{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+	// .row{
+	// 	margin-right: -10px !important;
+	// 	margin-left: -10px !important;
+	// }
 footer{
 	border-top: gray solid 4px; 
 	.row{
@@ -152,8 +181,50 @@ footer{
 		background-color: brown;
 	}
 
+	.last{
+		background-color: #111 !important;
+		border-top: 1px solid #000;
+		text-align: left;
+		padding-top: 10px;
+		padding-bottom: 5px;
+		p.l{
+			float: left;
+			margin-left: 50px;
+		}
+
+		p.r{
+			float: right;
+			margin-right: 50px;
+		}
+
+	}
+
 	div{
 		text-align: center;
 		color: white;	
 	}
 }
+
+
+#fix-left{
+	padding-left: 15px !important;
+}
+
+#fix-pad{
+	padding: 0px !important;
+}
+
+.no-pad{
+	padding: 0px !important;
+}
+
+img.img-last{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+
+
+

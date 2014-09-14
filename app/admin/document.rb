@@ -23,7 +23,7 @@ menu :label =>  "หนังสือ และ รายงาน", :priority 
     selectable_column
 
     column "title", :sortable => :title do |p|
-      link_to p.title, admin_bookfile_path(p)
+      link_to p.title, admin_document_path(p)
     end
 
     column "Category", :category do |p|

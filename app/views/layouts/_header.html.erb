@@ -1,55 +1,57 @@
-<div class="row">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="ico">
-        <%= link_to image_tag("logo.png"), root_path %>
+<div class="row ">
+
+    <div class="col-sm-2 head-icon hidden-xs no-pad">
+        <%= link_to image_tag("logo.png", :class => "img-dummy"), root_path %>
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav clearfix animated">
+
+    <div class="col-md-9 hidden-xs no-pad">
+        <ul class="nav animated">
             <li>
                 <a href="#">ทต. ปากน้ำ </a>
                 <div class="container-1 left">
-                    <ul>
-                        <li class="ula"><%= link_to("ข้อมูลทั่วไป", vision_path) %></li>
+                    <ul class="ula">
+                        <li><%= link_to("ข้อมูลทั่วไป", vision_path) %></li>
                     </ul>
                 </div>
             </li>
             <li><%= link_to("หนังสือราชการ ทต.", forums_path ) %></li>
             <li><%= link_to("ภาพกิจกรรม", events_path ) %></li>
             <li><a href="#">รายงาน</a>
-            <div class="container-1 left">
-                <ul>
-                    <li class="ula"><%= link_to("รายงานการเงิน", budget_path) %></li>
-                    <li class="ula"><%= link_to("รายงานการประชุม", conference_path ) %></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a href="#">ข่าว ทต.</a>
-            <div class="container-1 left">
-                <ul>
-                    <li class="ula"><%= link_to("ข่าวประชาสัมพันธ์", information_path ) %></li>
-                    <li class="ula"><%= link_to("ข่าวจัดซื้อจัดจ้าง", purchasing_path ) %></li>
-                    <li class="ula"><%= link_to("ข่าวสมัครงาน", recruit_path ) %></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <a href="#">บุคลากร</a>
-            <div class="container-1 left">
-                <ul>
-                    <li class="ula"><%= link_to("โครงสร้างองค์กร", "#") %></li>
-                    <li class="ula"><%= link_to("คณะผู้บริหาร", "#") %></li>
-                    <li class="ula"><%= link_to("สมาชิกสภา ทต.", "#") %></li>
-                    <li class="ula"><%= link_to("พนักงานเจ้าหน้าที่", "#") %></li>
-                </ul>
-            </div>
-        </li>
-        <li><%= link_to("ติดต่อเรา", contact_path) %></li>
-    </ul>
-    <div class="so"><%= link_to image_tag("facebook.png", :id => "soc"), "#" %>
-        <%= link_to image_tag("twitter.png", :id => "soc"), "#",style: 'margin-left: 10px;
-    margin-right: 2px;' %></div>
-
+                <div class="container-1 left">
+                    <ul class="ula">
+                        <li><%= link_to("รายงานการเงิน", budget_path) %></li>
+                        <li><%= link_to("รายงานการประชุม", conference_path ) %></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">ข่าว ทต.</a>
+                <div class="container-1 left">
+                    <ul class="ula">
+                        <li><%= link_to("ข่าวประชาสัมพันธ์", information_path ) %></li>
+                        <li><%= link_to("ข่าวจัดซื้อจัดจ้าง", purchasing_path ) %></li>
+                        <li><%= link_to("ข่าวสมัครงาน", recruit_path ) %></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">บุคลากร</a>
+                <div class="container-1 left">
+                    <ul class="ula">
+                        <li><%= link_to("โครงสร้างองค์กร", "#") %></li>
+                        <li><%= link_to("คณะผู้บริหาร", "#") %></li>
+                        <li><%= link_to("สมาชิกสภา ทต.", "#") %></li>
+                        <li><%= link_to("พนักงานเจ้าหน้าที่", "#") %></li>
+                    </ul>
+                </div>
+            </li>
+            <li><%= link_to("ติดต่อเรา", contact_path) %></li>
+        </ul>
     </div>
+
+    <div class="col-md-1 hidden-sm hidden-xs hidden-md soc no-pad">
+        <%= link_to image_tag("facebook.png"), "#" %>
+        <%= link_to image_tag("twitter.png"), "#" %>
+    </div>
+
 </div>

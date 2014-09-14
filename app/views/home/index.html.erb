@@ -30,46 +30,81 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-12 mar">
+  <div class="col-md-12 mar">
   	<marquee behavior="scroll" direction="left">Your scrolling text goes here</marquee>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-12 dum1">
-  	<%= image_tag("picdum.jpg") %>
+  <div class="col-md-12" style="margin-bottom: 20px;">
+  	<%= image_tag("cover.jpg", :class => "img-dummy") %>
   </div>
 </div>
 
 <div class="row">
-	<div class="col-sm-12 head-title">
+	<div class="col-sm-12 head-title" >
 		<div class="featured-title">
 			<div class="ribbon"><span>ผลงานและข่าวสาร</span></div>
 		</div>
 	</div>
 
-	
+	<div class="col-sm-12" >
+		<div class="col-sm-4" >
+			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
+			<h4><%= @news1.title %></h4>
+			<p><%= @news1.category %></p>
+		</div>
+		<div class="col-sm-4" >
+			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
+			<h4><%= @news2.title %></h4>
+			<p><%= @news2.category %></p>
+		</div>
+		<div class="col-sm-4" >
+			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
+			<h4><%= @news3.title %></h4>
+			<p><%= @news3.category %></p>
+		</div>
+		<div class="col-sm-4" >
+			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
+			<h4><%= @doc1.title %></h4>
+			<p><%= @doc1.category %></p>
+		</div>
+		<div class="col-sm-4" >
+			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
+			<h4><%= @doc2.title %></h4>
+			<p><%= @doc2.category %></p>
+		</div>
+		<div class="col-sm-4" >
+			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
+			<h4><%= @doc3.title %></h4>
+			<p><%= @doc3.category %></p>
+		</div>
+	</div>
 </div>
 
-<div class="row bot">
-	        	<div class="col-sm-4">
-	          		<%= image_tag("rails.png", :class => "img-dummy2") %>
-	        	</div>
-	        	<div class="col-sm-4">
-	          		<%= image_tag("rails.png", :class => "img-dummy2") %>
-	        	</div>
-	        	<div class="col-sm-4">
-	          		<%= image_tag("rails.png", :class => "img-dummy2") %>
-	        	</div>
-	        	<div class="col-sm-4">
-	          		<%= image_tag("rails.png", :class => "img-dummy2") %>
-	        	</div>
-	        	<div class="col-sm-4">
-	          		<%= image_tag("rails.png", :class => "img-dummy2") %>
-	        	</div>
-	        	<div class="col-sm-4">
-	          		<%= image_tag("rails.png", :class => "img-dummy2") %>
-	        	</div>
+<div class="row">
+	<div class="col-sm-12">
+	<div class="col-sm-12 box-last">
+    	<div class="col-sm-4 space">
+      		<%= image_tag("290x170.jpg", :class => "img-last") %>
+    	</div>
+    	<div class="col-sm-4 space" >
+      		<%= image_tag("290x170.jpg", :class => "img-last") %>
+    	</div>
+    	<div class="col-sm-4 space" >
+      		<%= image_tag("290x170.jpg", :class => "img-last") %>
+    	</div>
+    	<div class="col-sm-4 space" >
+      		<%= image_tag("290x170.jpg", :class => "img-last") %>
+    	</div>
+    	<div class="col-sm-4 space" >
+      		<%= image_tag("290x170.jpg", :class => "img-last") %>
+    	</div>
+    	<div class="col-sm-4 space" >
+      		<%= image_tag("290x170.jpg", :class => "img-last") %>
+    	</div>
+	</div>
+	</div>
 </div>
 
 

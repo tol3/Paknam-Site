@@ -33,15 +33,15 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fit => [50, 50]
+    process :resize_and_pad => [50, 50,"#ffffff"]
   end
 
   version :cover do
-    process :resize_to_fit => [940, 370]
+    process :resize_and_pad => [940, 370,"#ffffff"]
   end
 
   version :slide do
-    process :resize_to_fit => [290, 170]
+    process :resize_and_pad => [290, 170,"#ffffff"]
   end  
 
   def cache_dir

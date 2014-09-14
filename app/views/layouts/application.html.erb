@@ -8,18 +8,23 @@
 	</head>
 	<body>
 		<div class="wraper"></div>
-		<div class="huhu">
-			<header>
-				<%= render 'layouts/header' %>
-			</header>
-			<div class="row first">
-				<div class="custom-col add-bg">
-					<%= yield %>
+			<div class="huhu  head-bg">
+				<header>
+					<div class="row no-pad">
+						<div class="col-md-10 col-md-offset-1 no-pad  head-box">
+							<%= render 'layouts/header' %>	
+						</div>
+					</div>
+				</header>
+
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 ss">
+						<%= yield %>
+					</div>
 				</div>
 			</div>
 			<footer>
 				<%= render 'layouts/footer' %>
 			</footer>
-		</div>
 	</body>
 </html>

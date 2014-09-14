@@ -45,7 +45,7 @@ PaknamSiteV2::Application.routes.draw do
 
 # event
   match "events" => "event#index"
-  match "event" => "event#show"
+  match "events" => "event#show"
 #
 
 # forum
