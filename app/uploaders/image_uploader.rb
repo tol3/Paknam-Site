@@ -36,6 +36,14 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [50, 50]
   end
 
+  version :cover do
+    process :resize_to_fit => [940, 370]
+  end
+
+  version :slide do
+    process :resize_to_fit => [290, 170]
+  end  
+
   def cache_dir
     'uploads/cache'
   end
