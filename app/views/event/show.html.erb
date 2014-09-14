@@ -1,22 +1,22 @@
 <div class="row">
-	<div class="col-sm-8 col-sm-offset-2">
-		
-		<div class="col-sm-8">
+	<div class="col-sm-8 col-sm-offset-2 event">
+
+		<div class="col-sm-12 event-img">
 			<%= image_tag(EventImage.find_by_event_id(@event.id).image.url(:slide)) %>
 		</div>
 
-		<div class="col-sm-8">
-			<p> <h4> หัวข้อภาพ: <%= @event.title %></h4> </p>
-			<p> <h4>  จำนวนภาพ: <%= EventImage.where(event_id: @event.id).count %> </p> </h4>
-			<p> <h4> วันที่: <%= @event.created_at.strftime("%d-%m-%Y") %> </p> </h4>
-			<p> <h4> content : <%= @event.content %> </p> </h4>
+		<div class="col-sm-12 event-content event-show">
+			<h1><%= @event.title %></h1>
+			<p> <h4> <b> จำนวนภาพ: </b> <%= EventImage.where(event_id: @event.id).count %> </p> </h4>
+			<p> <h4> <b> วันที่: </b> <%= @event.created_at.strftime("%d-%m-%Y") %> </p> </h4>
+			<p> <h4> <b> content : </b> <%= @event.content %> </p> </h4>
 		</div>
 
-		<div class="col-sm-8">
 			<% EventImage.where(event_id: @event.id).each do |e| %>
+		<div class="col-sm-3 event-img">
 				<%= image_tag(e.image.url(:slide)) %>
-			<% end %>
 		</div>
-		
+			<% end %>
+
 	</div>
 </div>
