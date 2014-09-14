@@ -29,7 +29,7 @@ PaknamSiteV2::Application.routes.draw do
   match "information" => "news#info"
   match "purchasing" => "news#pucchasing"
   match "recruit" => "news#recruit"
-  match "show" => "news#show"
+  match "newss" => "news#show"
 #
 
 # project
@@ -41,6 +41,7 @@ PaknamSiteV2::Application.routes.draw do
 # report
   match "budget" => "report#budget"
   match "conference" => "report#conference"
+  match "reports" => "report#show"
 # 
 
 # event
@@ -50,11 +51,13 @@ PaknamSiteV2::Application.routes.draw do
 
 # forum
   match "forums" => "forum#index"
-  match "forum" => "forum#show"
+  match "forums" => "forum#show"
 #
 
   resources :event
-  resources :document
+  resources :forum
+  resources :report
+  resources :news
   resources :announcement
 
 

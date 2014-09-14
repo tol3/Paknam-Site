@@ -1,2 +1,12 @@
-<h1>Forum#show</h1>
-<p>Find me in app/views/forum/show.html.erb</p>
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+
+		<div class="col-sm-8">
+			<p> <h4> หัวข้อ: <%= @doc.title %></h4> </p>
+			<p> <h4> วันที่: <%= @doc.created_at.strftime("%d-%m-%Y") %> </p> </h4>
+			<p> <h4> category : <%= @doc.category %> </p> </h4>
+			<p> <h4> <%= link_to("PDF", @doc.file.url) %> </h4> </p>
+		</div>
+		
+	</div>
+</div>

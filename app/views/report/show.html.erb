@@ -1,39 +1,12 @@
-<<<<<<< HEAD
-<h1>Report#show</h1>
-<p>Find me in app/views/report/show.html.erb</p>
-=======
 <div class="row">
-  <div class="bs-example">
-    <table class="table">
-      <thead>
-        <tr>
-          
-          <th>หัวข้อเอกสาร</th>
-          <th>วันที่</th>
-          
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-         
-          <td>Mark</td>
-          <td>Otto</td>
-          
-        </tr>
-        <tr>
-          
-          <td>Jacob</td>
-          <td>Thornton</td>
-          
-        </tr>
-        <tr>
-          
-          <td>Larry</td>
-          <td>the Bird</td>
-         
-        </tr>
-      </tbody>
-    </table>
+  <div class="col-sm-8 col-sm-offset-2">
+
+    <div class="col-sm-8">
+      <p> <h4> หัวข้อ: <%= @doc.title %></h4> </p>
+      <p> <h4> วันที่: <%= @doc.created_at.strftime("%d-%m-%Y") %> </p> </h4>
+      <p> <h4> category : <%= @doc.category %> </p> </h4>
+      <p> <h4> <%= link_to("PDF", @doc.file.url) %> </h4> </p>
+    </div>
+    
   </div>
 </div>
->>>>>>> origin/frontend
