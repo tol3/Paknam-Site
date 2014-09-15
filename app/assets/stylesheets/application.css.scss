@@ -1,77 +1,99 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- *= require bootstrap
- */
+// /*
+//  * This is a manifest file that'll be compiled into application.css, which will include all the files
+//  * listed below.
+//  *
+//  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+//  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+//  *
+//  * You're free to add application-wide styles to this file and they'll appear at the top of the
+//  * compiled file, but it's generally better to create a new file per style scope.
+//  *
+//  *= require_self
+//  *= require_tree .
+//  *= require bootstrap
+//  */
 
  body{
+ 	background-image: url(rainbow1.jpg) !important;
+	background-repeat: no-repeat !important;
+	background-position: top;
+	background-size: 100% 100%;
  	background-color: rgb(10, 18, 3) !important;
+ 	img{
+ 		margin-right: auto;
+ 		margin-left: auto;
+ 	}
  }
 
-.item{
+ .container{
+ 	width: 100%;
+ }
+
+ .nav-custom{
+ 	width: 100%;
+ 	.navbar-inverse{
+ 		margin-bottom: 0px !important;
+ 	}
+ 	.navbar-collapse{
+ 		padding: 0px;
+	 	ul.nav-link{
+	 		max-height: 280px;
+	 		overflow: scroll;
+	 		list-style: none;
+	 		margin: 0px;
+	 		padding: 0px;
+	 		li{
+	 			
+	 			border-bottom: 2px #555 solid;
+	 			a{
+	 				color: #fff;
+	 				display: block;
+					padding: 15px 15px 15px 30px;
+	 			}
+	 		}
+	 	}
+	}
+ }
+
+// .item{
+// 	img{
+// 		width: 100%;	
+// 	}
+// 	max-height: 370px;
+// }
+
+// // .head-box{
+// // 	border-top-left-radius: 50%;
+// //  	border-top-right-radius: 50%;
+// //  	background-image: url(ok-bg.png);
+// // 	// background-repeat: no-repeat;
+// // 	// background-size: 80% 100%;
+// //     background-position: top;
+// //     margin-bottom: 10px;
+// // }
+
+.fix-img{
 	img{
-		width: 100%;	
+		width: 100%;
 	}
-	max-height: 370px;
 }
 
-.head-box{
-	border-top-left-radius: 50%;
- 	border-top-right-radius: 50%;
- 	background-image: url(ok-bg.png);
+.header{
+	background-image: url(bg.png);
 	// background-repeat: no-repeat;
-	// background-size: 80% 100%;
-    background-position: top;
-    margin-bottom: 10px;
+	background-position: top;
+	// margin-right: -15px !important;
 }
 
-.head-title{
-	margin-bottom: 15px;
-	border-top-right-radius: 30px;
+// .head-title{
+// 	margin-bottom: 15px;
+// 	border-top-right-radius: 30px;
 	
-	h3{
-		text-align: center;
-		color: white;
-	}
-}
-
-.head-icon{
-	z-index: 1;
-	a{
-		img{
-			width: 100%;
-			display: block;
-			margin-right: auto;
-			margin-left: auto;
-			margin-top: -70px;
-			// position: absolute;
-			// top: -65px;
-		}
-	}
-}
-
-.menu{
-	margin-left: 85px !important;
-}
-
-.soc{
-	position: absolute;
-	margin-top: 40px;
-	a{
-
-// 		float: left;
-// 		margin-right: 10px;
-	}
-}
+// 	h3{
+// 		text-align: center;
+// 		color: white;
+// 	}
+// }
 
 .featured-title{
 	background: url(shadow-divider.png) no-repeat center center;
@@ -94,18 +116,12 @@
 	}
 }
 
-.huhu{
-	margin-top: -460px;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.ss{
-	padding-top: 0px;
-	margin-top: -15px;
-	background-image: url(bg.png);
-}
+// .huhu{
+// 	// margin-top: -900px;
+//     // width: 100%;
+//     // margin-right: auto;
+//     // margin-left: auto;
+// }
 
 .box-last{
 	margin-bottom: 10px;
@@ -115,9 +131,9 @@
 	background-size: 100% 100%;
 }
 
-.content{
-	text-align: center;
-}
+// .content{
+// 	text-align: center;
+// }
 
 img.img-dummy{
 	display: block;
@@ -126,53 +142,13 @@ img.img-dummy{
 	width: 100%;
 }
 
- .dum1{
- 	height: 255px;
- 	border: dotted 1px gray;
- 	margin-bottom: 20px;
- 	padding-left: 0px !important;
- 	padding-right: 0px !important;
- 	img{
- 		display: block;
- 		width: 100%;
- 	}
- }
+//  .bot{
+//  	padding-bottom: 10px;
+// 	padding-top: 20px;
+// 	background: url(bg-foot.png) !important;
+// 	margin-bottom: 10px;
+//  }
 
- .bot{
- 	padding-bottom: 10px;
-	padding-top: 20px;
-	background: url(bg-foot.png) !important;
-	margin-bottom: 10px;
- }
-
- .first{
- 	// margin-top: 100px;
- 	padding-top: 40px;
- }
-
-.mar{
-	margin-top: 20px;
-	font-size: 1.5em;
-}
-
- div.wraper{
- 	background-image: url(bg.jpg);
- 	background-size: 100% 100%;
- 	background-position: top center;
- 	background-repeat: no-repeat;
- 	// height: 100%;
- 	// position: absolute;
- 	// top: -21px;
- 	height: 640px;
- }
-.space{
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-	// .row{
-	// 	margin-right: -10px !important;
-	// 	margin-left: -10px !important;
-	// }
 footer{
 	border-top: gray solid 4px; 
 	.row{
@@ -201,17 +177,8 @@ footer{
 
 	div{
 		text-align: center;
-		color: white;	
+		color: white;
 	}
-}
-
-
-#fix-left{
-	padding-left: 15px !important;
-}
-
-#fix-pad{
-	padding: 0px !important;
 }
 
 .no-pad{
@@ -223,8 +190,31 @@ img.img-last{
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}	
+
+.soc-t{
+	position: absolute;
+	top: 35px;
+	right: 70px;
+	a{
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
 }
-
-
+.soc-f{
+	position: absolute;
+	top: 35px;
+	right: 115px;
+	a{
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+}
 
 

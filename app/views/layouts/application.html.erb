@@ -7,24 +7,79 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-		<div class="wraper"></div>
-			<div class="huhu  head-bg">
-				<header>
-					<div class="row no-pad">
-						<div class="col-md-10 col-md-offset-1 no-pad  head-box">
-							<%= render 'layouts/header' %>	
-						</div>
-					</div>
-				</header>
 
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1 ss">
-						<%= yield %>
-					</div>
+	<div class="nav-custom hidden-lg hidden-md hidden-sm">
+		<nav class="navbar navbar-inverse" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">Paknam</a> -->
+      <%= link_to("Paknam", root_path, :class =>"navbar-brand") %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav-link">
+      	<li><%= link_to("ข้อมูลทั่วไป", vision_path) %></li>
+      	<li><%= link_to("รายงานการเงิน", budget_path) %></li>
+		<li><%= link_to("รายงานการประชุม", conference_path ) %></li>
+      	<li><%= link_to("ข่าวประชาสัมพันธ์", information_path ) %></li>
+        <li><%= link_to("ข่าวจัดซื้อจัดจ้าง", purchasing_path ) %></li>
+        <li><%= link_to("ข่าวสมัครงาน", recruit_path ) %></li>
+        <li><%= link_to("โครงสร้างองค์กร", "#") %></li>
+        <li><%= link_to("คณะผู้บริหาร", "#") %></li>
+        <li><%= link_to("สมาชิกสภา ทต.", "#") %></li>
+        <li><%= link_to("พนักงานเจ้าหน้าที่", "#") %></li>
+        <li><%= link_to("ติดต่อเรา", contact_path) %></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+
+	</div>
+
+		<div class="wraper"></div>
+		<div class="container">
+			<div class="row fix-img">
+				<%= link_to image_tag("banner.jpg"), root_path %>
+
+				<div class="soc-t hidden-xs">
+	        		<%= link_to image_tag("twitter.png"), "#" %>
+				</div>
+				<div class="soc-f hidden-xs">
+	        		<%= link_to image_tag("facebook.png"), "#" %>
 				</div>
 			</div>
-			<footer>
-				<%= render 'layouts/footer' %>
-			</footer>
+			
+				
+			
+			
+		</div>
+			
+		<header>
+		<div class="container">
+			<div class="row">
+				<%= render 'layouts/header' %>	
+				</div>
+				</div>
+		</header>
+
+		<div class="container">
+			<div class="row header">
+				<div class="col-md-10 col-md-offset-1">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<%= render 'layouts/footer' %>
+		</footer>
+
 	</body>
 </html>
