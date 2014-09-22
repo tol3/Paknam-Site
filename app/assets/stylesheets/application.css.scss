@@ -19,14 +19,35 @@
 	background-position: top;
 	background-size: 100% 100%;
  	background-color: rgb(10, 18, 3) !important;
+
  	img{
  		margin-right: auto;
  		margin-left: auto;
  	}
  }
 
+.head{
+	padding: 30px 0 15px 0;
+	img.head{
+		width: 80%;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: 0px;
+	}
+
+	.head-soc{
+		a{
+			padding-top: 10px;
+			margin-left: 10px;
+			float: right;
+		}
+	}
+}
+
  .container{
- 	width: 100%;
+ // 	width: 100%;
+ 	overflow-x: hidden;
  }
 
  .nav-custom{
@@ -79,21 +100,40 @@
 }
 
 .header{
+	padding-top: 20px;
+	padding-bottom: 20px;
 	background-image: url(bg.png);
-	// background-repeat: no-repeat;
 	background-position: top;
-	// margin-right: -15px !important;
 }
 
-// .head-title{
-// 	margin-bottom: 15px;
-// 	border-top-right-radius: 30px;
+.mar{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.head-title{
+	margin-bottom: 20px;
+	border-top-right-radius: 30px;
 	
-// 	h3{
-// 		text-align: center;
-// 		color: white;
-// 	}
-// }
+	h3{
+		text-align: center;
+		color: white;
+	}
+}
+
+p.sub{
+	color: #4D4A4A;
+	font-size: .9em;
+	padding-bottom: 10px;
+	text-decoration: underline;
+}
 
 .featured-title{
 	background: url(shadow-divider.png) no-repeat center center;
@@ -116,12 +156,18 @@
 	}
 }
 
-// .huhu{
-// 	// margin-top: -900px;
-//     // width: 100%;
-//     // margin-right: auto;
-//     // margin-left: auto;
-// }
+img.logo{
+	width: 120%;
+}
+
+.bs-example{
+	max-height: 370px;
+	overflow: hidden;
+}
+
+.pic{
+	margin-bottom: 20px;
+}
 
 .box-last{
 	margin-bottom: 10px;
@@ -150,6 +196,7 @@ img.img-dummy{
 //  }
 
 footer{
+	margin-top: 30px;
 	border-top: gray solid 4px; 
 	.row{
 		margin-right: 0px;
@@ -163,6 +210,7 @@ footer{
 		text-align: left;
 		padding-top: 10px;
 		padding-bottom: 5px;
+		font-size: .7em;
 		p.l{
 			float: left;
 			margin-left: 50px;
@@ -171,6 +219,13 @@ footer{
 		p.r{
 			float: right;
 			margin-right: 50px;
+			a{
+				color: #fff;
+				text-decoration: none;
+			}
+			a:hover{
+				color: #fff;
+			}
 		}
 
 	}

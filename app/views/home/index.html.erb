@@ -10,13 +10,13 @@
 	      </ol>
 	      <div class="carousel-inner">
 	        <div class="item active">
-	          <%= image_tag(EventImage.where(event_id: @events.first.id).first.image.url(:cover)) %>
+	          <%= image_tag("940x370.jpg") %>
 	        </div>
 	        <div class="item">
-	          <%= image_tag(EventImage.where(event_id: @events[1].id).first.image.url(:cover)) %>
+	          <%= image_tag("940x370.jpg") %>
 	        </div>
 	        <div class="item">
-	          <%= image_tag(EventImage.where(event_id: @events.last.id).first.image.url(:cover)) %>
+	          <%= image_tag("940x370.jpg") %>
 	        </div>
 	      </div>
 	      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -29,17 +29,17 @@
 	</div>
 </div>
 
-<div class="row">
+<div class="row mar">
   <div class="col-md-12">
-  	<marquee behavior="scroll" direction="left">Your scrolling text goes here</marquee>
+  	<marquee behavior="scroll" direction="left" scrollamount="3">พัฒนาคนด้านการศึกษา พัฒนาสวัสดิการและสังคม ส่งเสริมเกษตรกรรม เสริมสร้างเศรษฐกิจชุมชน มาพร้อมโครงสร้างพื้นฐาน</marquee>
   </div>
 </div>
 
-<!-- <div class="row">
+<div class="row pic">
   <div class="col-md-12" style="margin-bottom: 20px;">
   	<%= image_tag("cover.jpg", :class => "img-dummy") %>
   </div>
-</div> -->
+</div>
 
 <div class="row">
 	<div class="col-sm-12 head-title" >
@@ -48,36 +48,36 @@
 		</div>
 	</div>
 
-	<div class="col-sm-12" >
-		<div class="col-sm-4" >
+	<div class="col-md-12" >
+		<div class="col-sm-4 " >
 			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
 			<h4><%= @news1.title %></h4>
-			<p><%= @news1.category %></p>
+			<center><p class="sub"><%= @news1.category %></p></center>
 		</div>
 		<div class="col-sm-4" >
 			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
 			<h4><%= @news2.title %></h4>
-			<p><%= @news2.category %></p>
+			<center><p class="sub"><%= @news2.category %></p></center>
 		</div>
 		<div class="col-sm-4" >
 			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
 			<h4><%= @news3.title %></h4>
-			<p><%= @news3.category %></p>
+			<center><p class="sub"><%= @news3.category %></p></center>
 		</div>
 		<div class="col-sm-4" >
 			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
 			<h4><%= @doc1.title %></h4>
-			<p><%= @doc1.category %></p>
+			<center><p class="sub"><%= @doc1.category %></p></center>
 		</div>
 		<div class="col-sm-4" >
 			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
 			<h4><%= @doc2.title %></h4>
-			<p><%= @doc2.category %></p>
+			<center><p class="sub"><%= @doc2.category %></p></center>
 		</div>
 		<div class="col-sm-4" >
 			<%= image_tag("290x170.jpg", :class => "img-dummy") %>
 			<h4><%= @doc3.title %></h4>
-			<p><%= @doc3.category %></p>
+			<center><p class="sub"><%= @doc3.category %></p></center>
 		</div>
 	</div>
 </div>
