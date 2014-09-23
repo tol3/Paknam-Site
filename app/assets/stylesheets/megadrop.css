@@ -9,9 +9,8 @@ a { color: #666; text-decoration: none;}
 background: #666;
 border-radius: 3px;
 width: 710px;
-margin: 10px auto 10px 10px;
+margin: 40px auto 10px auto;
 height: 43px;
-padding-left: 0;
 }
 
 .nav li { list-style: none;  }

@@ -14,10 +14,21 @@
  */
 
  body{
- 	background-image: url(rainbow1.jpg) !important;
-	background-repeat: no-repeat !important;
-	background-position: top;
-	background-size: 100% 100%;
+ 	margin: 0;
+	padding: 0;
+	// height: 100%;
+	
+ 	background: url(rainbow1.jpg) no-repeat center center fixed !important; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ // 	background-image: url(rainbow1.jpg) !important;
+	// background-repeat: repeat-y !important;
+	// min-height:120% !important;
+	// min-width: 120% !important;
+	// background-position: top;
+	// background-size: 100% 100%;
  	background-color: rgb(10, 18, 3) !important;
 
  	img{
@@ -27,7 +38,7 @@
  }
 
 .head{
-	padding: 30px 0 15px 0;
+	padding: 0px 0 15px 0;
 	img.head{
 		width: 80%;
 		display: block;
@@ -102,8 +113,13 @@
 .header{
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-image: url(bg.png);
+	// background-image: url(bg.png);
 	background-position: top;
+}
+
+.use-bg{
+	background-image: url(bg.png);
+	padding-bottom: 20px;
 }
 
 .mar{
@@ -157,12 +173,16 @@ p.sub{
 }
 
 img.logo{
-	width: 120%;
+	width: 100%;
 }
 
 .bs-example{
 	max-height: 370px;
 	overflow: hidden;
+	// padding-left: 15px;
+	// padding-right: 15px;
+	padding: 15px;
+
 }
 
 .pic{
