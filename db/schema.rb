@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140907154253) do
+ActiveRecord::Schema.define(:version => 20140924104027) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -84,12 +84,15 @@ ActiveRecord::Schema.define(:version => 20140907154253) do
     t.integer  "event_id"
     t.datetime "updated_at"
     t.datetime "created_at"
+    t.integer  "product_id"
   end
+
+  add_index "event_images", ["product_id"], :name => "index_event_images_on_product_id"
 
   create_table "events", :force => true do |t|
     t.string   "title"
     t.string   "cover"
-    t.string   "content"
+    t.text     "content"
     t.boolean  "publish"
     t.datetime "updated_at"
     t.datetime "created_at"

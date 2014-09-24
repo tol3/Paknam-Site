@@ -1,22 +1,67 @@
-<div class="row">
-	<div class="col-sm-8 col-sm-offset-2 event">
+<div class="row show-event">
 
-		<div class="col-sm-12 event-img">
-			<%= image_tag(EventImage.find_by_event_id(@event.id).image.url(:slide)) %>
+	<div class="col-sm-10 col-sm-offset-1 show-img line">
+		<div class="show-sub">
+			<h5><%= fa_icon "calendar", text: @event.created_at.strftime("%d-%m-%Y") %> | <%= fa_icon "picture-o", text: EventImage.where(event_id: @event.id).count %></h5>
 		</div>
-
-		<div class="col-sm-12 event-content event-show">
-			<h1><%= @event.title %></h1>
-			<p> <h4> <b> จำนวนภาพ: </b> <%= EventImage.where(event_id: @event.id).count %> </p> </h4>
-			<p> <h4> <b> วันที่: </b> <%= @event.created_at.strftime("%d-%m-%Y") %> </p> </h4>
-			<p> <h4> <b> content : </b> <%= @event.content %> </p> </h4>
-		</div>
-
-			<% EventImage.where(event_id: @event.id).each do |e| %>
-		<div class="col-sm-3 event-img">
-				<%= image_tag(e.image.url(:slide)) %>
-		</div>
+		<div id="slider" class="flexslider">
+		  <ul class="slides">
+		    <% EventImage.where(event_id: @event.id).each do |e| %>
+				<li>
+					<%= image_tag(e.image.url) %>
+				</li>
 			<% end %>
-
+		  </ul>
+		</div>
+		<div id="carousel" class="flexslider">
+		  <ul class="slides">
+		  	<% EventImage.where(event_id: @event.id).each do |e| %>
+				<li>
+					<%= image_tag(e.image.url) %>
+				</li>
+			<% end %>
+		  </ul>
+		</div>
 	</div>
+
+	<div class="col-sm-10 col-sm-offset-1">
+		<div class="col-sm-12 content-event">
+			<h1><%= @event.title %></h1>
+			<p><%= @event.content %> </p>
+		</div>
+	</div>
+
+	<div class="col-sm-10 col-sm-offset-1">
+		<%= link_to("Back", :back ) %>
+	</div>
+
 </div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $('#slider').flexslider({
+	    animation: "slide",
+	    controlNav: false,
+	    animationLoop: true,
+	    slideshow: false,
+	    sync: "#carousel"
+	  });
+
+	  $('#carousel').flexslider({
+	    animation: "slide",
+	    controlNav: false,
+	    animationLoop: false,
+	    slideshow: false,
+	    itemWidth: 100,
+	    itemMargin: 5,
+	    asNavFor: '#slider'
+	  });
+	});
+</script>
+
+
+
+
+
+

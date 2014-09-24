@@ -1,20 +1,16 @@
 
 <div class="row">
 	<% @events.each do |e| %>
-		<div class="col-sm-8 col-sm-offset-2 event">
-
-
+		<div class="col-sm-10 col-sm-offset-1 event line">
 			<div class="col-sm-5 event-img">
-				<%= link_to(image_tag(EventImage.find_by_event_id(e.id).image.url(:slide)), event_path(e.id))  %>
+				<%= link_to(image_tag(EventImage.find_by_event_id(e.id).image.url), event_path(e))  %>
 			</div>
 
 			<div class="col-sm-7 event-content">
-				<p> <h4> <b> หัวข้อภาพ: </b><%= e.title %></h4> </p>
-				<p> <h4> <b>  จำนวนภาพ: </b><%= EventImage.where(event_id: e.id).count %> </p> </h4>
-				<p> <h4> <b> วันที่: </b><%= e.created_at.strftime("%d-%m-%Y") %> </p> </h4>
+				<h3><%= link_to(e.title, event_path(e)) %></h3>
+				<p><%= e.content.truncate(100) %> </p>
 			</div>
-
-
+			<h5> <%= fa_icon "picture-o", text: EventImage.where(event_id: e.id).count %> | <%= fa_icon "calendar", text: e.created_at.strftime("%d-%m-%Y") %></h5>
 		</div>
 	<% end %>
 </div>

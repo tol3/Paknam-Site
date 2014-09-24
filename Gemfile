@@ -30,6 +30,7 @@ gem 'kaminari'
 gem 'activeadmin', github: 'gregbell/active_admin', branch: '0-6-stable'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
+gem "font-awesome-rails"
 
 gem 'active_skin'
 gem 'puma'

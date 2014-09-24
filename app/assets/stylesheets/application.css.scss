@@ -11,24 +11,18 @@
  *= require_self
  *= require_tree .
  *= require bootstrap
+ *= require font-awesome
  */
 
  body{
  	margin: 0;
 	padding: 0;
-	// height: 100%;
-	
- 	background: url(rainbow1.jpg) no-repeat center center fixed !important; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
- // 	background-image: url(rainbow1.jpg) !important;
-	// background-repeat: repeat-y !important;
-	// min-height:120% !important;
-	// min-width: 120% !important;
-	// background-position: top;
-	// background-size: 100% 100%;
+
+ 	background: url(rainbow1.jpg) no-repeat top center fixed !important; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
  	background-color: rgb(10, 18, 3) !important;
 
  	img{
@@ -48,6 +42,8 @@
 	}
 
 	.head-soc{
+		position: absolute;
+		right: 20px;
 		a{
 			padding-top: 10px;
 			margin-left: 10px;
@@ -86,23 +82,6 @@
 	 	}
 	}
  }
-
-// .item{
-// 	img{
-// 		width: 100%;	
-// 	}
-// 	max-height: 370px;
-// }
-
-// // .head-box{
-// // 	border-top-left-radius: 50%;
-// //  	border-top-right-radius: 50%;
-// //  	background-image: url(ok-bg.png);
-// // 	// background-repeat: no-repeat;
-// // 	// background-size: 80% 100%;
-// //     background-position: top;
-// //     margin-bottom: 10px;
-// // }
 
 .fix-img{
 	img{
@@ -179,8 +158,6 @@ img.logo{
 .bs-example{
 	max-height: 370px;
 	overflow: hidden;
-	// padding-left: 15px;
-	// padding-right: 15px;
 	padding: 15px;
 
 }
@@ -197,23 +174,12 @@ img.logo{
 	background-size: 100% 100%;
 }
 
-// .content{
-// 	text-align: center;
-// }
-
 img.img-dummy{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
 }
-
-//  .bot{
-//  	padding-bottom: 10px;
-// 	padding-top: 20px;
-// 	background: url(bg-foot.png) !important;
-// 	margin-bottom: 10px;
-//  }
 
 footer{
 	margin-top: 30px;
@@ -247,7 +213,6 @@ footer{
 				color: #fff;
 			}
 		}
-
 	}
 
 	div{

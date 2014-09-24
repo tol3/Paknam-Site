@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
   structure do
     title   :string
     cover   :string
-    content :string
+    content :text
     publish :boolean
 
     timestamps
