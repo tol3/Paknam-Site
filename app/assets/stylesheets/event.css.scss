@@ -5,7 +5,11 @@
 
     margin-top: 40px;
     padding-bottom: 20px;
-
+    h2{
+        text-align: center;
+        text-decoration: underline;
+        border-bottom: 2px solid #333;
+    }
     .event-img{
         margin-bottom: 20px;
 
@@ -24,9 +28,11 @@
         }
         h3{
             text-align: center;
-            background-color: rgba(73, 179, 94, 0.75);
+            // background-color: rgba(73, 179, 94, 0.75);
             padding-top: 10px;
             padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            border-top: 2px solid #333;
             margin-top: 0px;
              a{
                 text-decoration: none;
@@ -36,7 +42,7 @@
             }
         }
         h3:hover{
-            background-color: rgba(73, 179, 94,1);
+            // background-color: rgba(73, 179, 94,1);
             a{
                  color: #fff;
             }
@@ -104,5 +110,5 @@
 }
 
 .line{
-    border-bottom: 2px #333 solid;
+    border-bottom: 2px #333 dashed;
 }

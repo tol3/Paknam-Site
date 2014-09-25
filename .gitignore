@@ -16,6 +16,7 @@ db/*.sqlite3
 log/*.log
 tmp
 public/uploads
+public/assets
 
 .DS_Store
 
