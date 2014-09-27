@@ -14,7 +14,7 @@
                 <td> <center> <%= index+1 %> </center></td>
                 <td><%= link_to(d.title, d.file.url, :target => "_blank") %></td>
                 <td><center><%= d.created_at.strftime("%d-%m-%Y") %></center></td>
-                <td><center><%= link_to "<i class='fa fa-file-pdf-o fix-i'></i> Download file".html_safe, d.file.url %><center></td>
+                <td><center><%= link_to "<i class='fa fa-file-pdf-o fix-i'></i> Download file".html_safe, :action => :download, :id => d.id %><center></td>
               </tr>
           <% end %>
       </tbody>

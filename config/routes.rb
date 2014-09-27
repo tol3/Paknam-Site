@@ -25,10 +25,12 @@ PaknamSiteV2::Application.routes.draw do
   get "home/info"
   get "home/contact"
   get "home/index"
+  get "home/sitemap"
 
 # home
   match "contact" => "home#contact"
   match "vision" => "home#info"
+  match "sitemap" => "home#sitemap"
 # 
 
 # news
