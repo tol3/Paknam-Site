@@ -16,4 +16,8 @@ class HomeController < ApplicationController
   	@doc2 = Document.where('category = ? AND publish = ?', "รายงานประชุม", true).last
   	@doc3 = Document.where('category = ? AND publish = ?', "รายงานการเงิน", true).last
   end
+
+  def sitemap
+    
+  end
 end
