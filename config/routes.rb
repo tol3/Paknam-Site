@@ -1,9 +1,15 @@
 PaknamSiteV2::Application.routes.draw do
 
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   root :to => 'home#index'
+
+  get "chart/manager"
+  get "chart/councillor"
+  get "chart/clerk"
+  get "chart/competent"
 
   get "forum/index"
   get "forum/show"
@@ -53,6 +59,13 @@ PaknamSiteV2::Application.routes.draw do
   match "forums" => "forum#index"
   match "forums" => "forum#show"
 #
+
+# chart
+  match "organize_1" => "chart#clerk"
+  match "organize_2" => "chart#manager"
+  match "organize_3" => "chart#councillor"
+  match "organize_4" => "chart#competent"
+# 
 
   resources :event
   resources :forum

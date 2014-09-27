@@ -1,0 +1,18 @@
+<div class="bs-example">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>หัวข้อเอกสาร</th>
+              <th>วันที่</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @docs.each do |d| %>
+              <tr>
+                <td><%= link_to(d.title, news_path(d.id)) %></td>
+                <td><%= d.created_at.strftime("%d-%m-%Y") %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+    </div>

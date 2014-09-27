@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140924104027) do
+ActiveRecord::Schema.define(:version => 20140927085662) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -70,6 +70,22 @@ ActiveRecord::Schema.define(:version => 20140924104027) do
     t.string   "storage_size"
   end
 
+  create_table "clerks", :force => true do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "officer"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+  end
+
+  create_table "councillors", :force => true do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "officer"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+  end
+
   create_table "documents", :force => true do |t|
     t.string   "title"
     t.string   "category"
@@ -96,6 +112,72 @@ ActiveRecord::Schema.define(:version => 20140924104027) do
     t.boolean  "publish"
     t.datetime "updated_at"
     t.datetime "created_at"
+  end
+
+  create_table "manager_hierarchies", :id => false, :force => true do |t|
+    t.integer "ancestor_id",   :null => false
+    t.integer "descendant_id", :null => false
+    t.integer "generations",   :null => false
+  end
+
+  add_index "manager_hierarchies", ["ancestor_id", "descendant_id", "generations"], :name => "manager_anc_desc_udx", :unique => true
+  add_index "manager_hierarchies", ["descendant_id"], :name => "manager_desc_idx"
+
+  create_table "managers", :force => true do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "officer"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+  end
+
+  create_table "person1s", :force => true do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "officer"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+  end
+
+  create_table "person2s", :force => true do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "officer"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+  end
+
+  create_table "person3s", :force => true do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "officer"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+  end
+
+  create_table "person4s", :force => true do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "officer"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+  end
+
+  create_table "person5s", :force => true do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "officer"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+  end
+
+  create_table "personnels", :force => true do |t|
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "officer"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+    t.string   "type"
   end
 
 end

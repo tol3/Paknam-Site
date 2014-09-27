@@ -1,17 +1,17 @@
 class NewsController < ApplicationController
   def info
-  	@news = Announcement.info
+  	@docs = Announcement.info
   end
 
   def pucchasing
-  	@news = Announcement.buy
+  	@docs = Announcement.buy
   end
 
   def recruit
-  	@news = Announcement.job
+  	@docs = Announcement.job
   end
 
   def show
-  	@an = Announcement.find(params[:id])
+  	@doc = Announcement.find(params[:id])
   end
 end

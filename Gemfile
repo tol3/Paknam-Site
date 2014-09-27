@@ -31,10 +31,11 @@ gem 'activeadmin', github: 'gregbell/active_admin', branch: '0-6-stable'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 gem "font-awesome-rails"
+gem 'gmaps4rails'
+gem "google_visualr", ">= 2.1"
 
 gem 'active_skin'
 gem 'puma'
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
