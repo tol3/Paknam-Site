@@ -6,23 +6,51 @@
 
   <div class="col-sm-10 col-sm-offset-1">
     <div class="col-sm-4">
-    	<ul>Home
-    	<li><%= link_to "Contact", contact_path %></li>
-    </ul>	
+      <ul>หน้าแรก
+      <li><%= link_to "ติดต่อเรา", contact_path %></li>
+      <li>
+        <%= link_to "วิสัยทัศน์", vision_path %>
+      </li>
+      <li>
+        <%= link_to"แผนผังเว็บไซท์", sitemap_path %>
+      </li>
+    </ul>
     </div>
     <div class="col-sm-4">
-    	<ul>Home
-    	<li><%= link_to "Contact", contact_path %></li>
+      <ul>ข่าว ทต.
+      <li><%= link_to "ข่าวประชาสัมพันธ์", information_path %></li>
+      <li><%= link_to"ข่าวจัดซื้อจัดจ้าง", purchasing_path %></li>
+      <li><%= link_to"ข่าวสมัครงาน", recruit_path %></li>
+
     </ul>
     </div>
      <div class="col-sm-4">
-    	<ul>Home
-    	<li><%= link_to "Contact", contact_path %></li>
+      <ul>รายงาน
+      <li><%= link_to "รายงานการเงิน", budget_path %></li>
+      <li><%= link_to"รายงานการประชุม", conference_path %></li>
     </ul>
     </div>
   </div>
 
-
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-4">
+      <ul>ภาพกิจกรรม
+      <li><%= link_to "ภาพกิจกรรม", events_path %></li>
+    </ul>
+    </div>
+    <div class="col-sm-4">
+      <ul>หนังสือราชการ
+      <li><%= link_to "หนังสือราชการ", forums_path %></li>
+    </ul>
+    </div>
+     <div class="col-sm-4">
+      <ul>บุคลากร
+      <li><%= link_to "ปลัดเทศบาล", organize_1_path %></li>
+      <li><%= link_to"คณะผู้บริหาร", organize_2_path %></li>
+      <li><%= link_to"สมาชิกสภา ทต.", organize_3_path %></li>
+      <li><%= link_to"พนักงานเจ้าหน้าที่", organize_4_path %></li>
+    </ul>
+    </div>
+  </div>
 </div>
 
-  
