@@ -12,9 +12,13 @@
         <% @docs.each_with_index do |d,index| %>
               <tr>
                 <td> <center> <%= index+1 %> </center></td>
-                <td><%= link_to(d.title, d.file.url, :target => "_blank") %></td>
+                <td><%= d.title %></td>
                 <td><center><%= d.created_at.strftime("%d-%m-%Y") %></center></td>
-                <td><center><%= link_to "<i class='fa fa-file-pdf-o fix-i'></i> Download file".html_safe, :action => :download, :id => d.id %><center></td>
+                <% if d.file.url == nil %>
+                <td><center><%= "<i class='fa fa-file-pdf-o fix-i'></i> ไม่มีเอกสาร แนบ".html_safe %></center></td>
+                <% else %>
+                <td><center><%= link_to "<i class='fa fa-file-pdf-o fix-i'></i> Download file".html_safe, d.file.url, :target => "_blank" %><center></td>
+                <% end %>
               </tr>
           <% end %>
       </tbody>

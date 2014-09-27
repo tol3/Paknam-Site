@@ -13,6 +13,7 @@ PaknamSiteV2::Application.routes.draw do
 
   get "forum/index"
   get "forum/show"
+  # get "forum/download"
   get "event/index"
   get "event/show"
   get "report/budget"
