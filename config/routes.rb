@@ -26,12 +26,13 @@ PaknamSiteV2::Application.routes.draw do
   get "home/contact"
   get "home/index"
   get "home/sitemap"
+  get "home/download"
 
 # home
   match "contact" => "home#contact"
   match "vision" => "home#info"
   match "sitemap" => "home#sitemap"
-# 
+#
 
 # news
   match "information" => "news#info"
@@ -44,13 +45,13 @@ PaknamSiteV2::Application.routes.draw do
   match "plan" => "planproject#plan"
   match "majorproject" => "planproject#majorproject"
   match "strategy" => "planproject#strategy"
-# 
+#
 
 # report
   match "budget" => "report#budget"
   match "conference" => "report#conference"
   match "reports" => "report#show"
-# 
+#
 
 # event
   match "events" => "event#index"
@@ -67,7 +68,7 @@ PaknamSiteV2::Application.routes.draw do
   match "organize_2" => "chart#manager"
   match "organize_3" => "chart#councillor"
   match "organize_4" => "chart#competent"
-# 
+#
 
   resources :event
   resources :forum
