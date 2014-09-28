@@ -31,8 +31,8 @@ class ChartController < ApplicationController
   	c4 = []
   	c5 = []
   	
-  	18.times.each do |e|
-  		c1 << Person1.find(e+1)
+  	Person1.all.each do |e|
+  		c1 << e
   	end
   	
   	6.times.each do |e|
