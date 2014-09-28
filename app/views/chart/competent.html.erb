@@ -9,7 +9,7 @@
 		<div class="row">
 			<!-- Nav tabs -->
 			<ul class="custom-nav" role="tablist" id="myTab">
-			  <li><a href="#chart1" role="tab" data-toggle="tab">สำนักปลัด</a></li>
+			  <li><a href="#chart1" role="tab" data-toggle="tab">สำนักงานปลัด</a></li>
 			  <li><a href="#chart2" role="tab" data-toggle="tab">กองคลัง</a></li>
 			  <li><a href="#chart3" role="tab" data-toggle="tab">กองช่าง</a></li>
 			  <li><a href="#chart4" role="tab" data-toggle="tab">กองการศึกษา</a></li>
@@ -20,43 +20,23 @@
 			<div class="tab-content">
 
 			  <div class="tab-pane fade" id="chart1">
-			  	<div class="row">
-			  		<div class="col-sm-12">
-			  			asdf
-			  		</div>
-			  	</div>
+			  	<%= render 'chart/chart1' %>
 			  </div>
 
 			  <div class="tab-pane fade" id="chart2">
-			  	<div class="row">
-			  		<div class="col-sm-12">
-			  			asdf
-			  		</div>
-			  	</div>
+			  	<%= render 'chart/chart2' %>
 			  </div>
 
 			  <div class="tab-pane fade" id="chart3">
-				<div class="row">
-			  		<div class="col-sm-12">
-			  			asdf
-			  		</div>
-			  	</div>
+				<%= render 'chart/chart3' %>
 			  </div>
 
 			  <div class="tab-pane fade" id="chart4">
-			  	<div class="row">
-			  		<div class="col-sm-12">
-			  			asdf
-			  		</div>
-			  	</div>
+			  	<%= render 'chart/chart4' %>
 			  </div>
 
 			  <div class="tab-pane fade" id="chart5">
-			  	<div class="row">
-			  		<div class="col-sm-12">
-			  			asdf
-			  		</div>
-			  	</div>
+			  	<%= render 'chart/chart5' %>
 			  </div>
 
 			</div>
@@ -67,7 +47,7 @@
 
 
 <script type="text/javascript">
-	$('#myTab a:first').tab('show')
+	$('#myTab a:last').tab('show')
 </script>
 
 
