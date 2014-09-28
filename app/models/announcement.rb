@@ -14,7 +14,7 @@ class Announcement < ActiveRecord::Base
     title   :string
     category :string
     file    :string
-    content :string
+    content :text
     publish :boolean
 
     timestamps
