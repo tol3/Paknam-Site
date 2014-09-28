@@ -11,6 +11,8 @@
 	}
 	.caption{
 		text-align: center;
+		max-height: 87px;
+		overflow-x: scroll;
 		h4{
 			font-weight: bolder;
 		}
