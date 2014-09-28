@@ -227,13 +227,13 @@ footer{
 }
 
 img.img-last{
-	width: 50%;
+	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
-}	
+}
 
 .soc-t{
 	position: absolute;
@@ -258,4 +258,30 @@ img.img-last{
 	}
 }
 
+.shot-link{
+	h4{
+		text-align: center;
+		a{
+			color: #333;
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	}
 
+	img:hover{
+		opacity: 0.5;
+		-webkit-transition: all 0.2s ease-in 0.2s;
+	    -moz-transition: all 0.2s ease-in 0.2s;
+	    -o-transition: all 0.2s ease-in 0.2s;
+	    transition: all 0.2s ease-in 0.2s;
+	}
+
+	img{
+		-webkit-transition: all 0.2s ease-in 0.2s;
+	    -moz-transition: all 0.2s ease-in 0.2s;
+	    -o-transition: all 0.2s ease-in 0.2s;
+	    transition: all 0.2s ease-in 0.2s;
+	}
+}

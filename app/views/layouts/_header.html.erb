@@ -4,7 +4,6 @@
         <ul class="nav animated">
             <li>
                 <%= link_to("ทต. ปากน้ำ", root_path) %>
-                <!-- <a href="#">ทต. ปากน้ำ </a> -->
                 <div class="container-1 left">
                     <ul class="ula">
                         <li><%= link_to("ข้อมูลทั่วไป", vision_path) %></li>
@@ -13,7 +12,8 @@
             </li>
             <li><%= link_to("หนังสือราชการ ทต.", forums_path ) %></li>
             <li><%= link_to("ภาพกิจกรรม", events_path ) %></li>
-            <li><a href="#">รายงาน</a>
+            <li>
+                <%= link_to("รายงาน", budget_path) %>
                 <div class="container-1 left">
                     <ul class="ula">
                         <li><%= link_to("รายงานการเงิน", budget_path) %></li>
@@ -22,7 +22,7 @@
                 </div>
             </li>
             <li>
-                <a href="#">ข่าว ทต.</a>
+                <%= link_to("ข่าว ทต.", information_path) %>
                 <div class="container-1 left">
                     <ul class="ula">
                         <li><%= link_to("ข่าวประชาสัมพันธ์", information_path ) %></li>
@@ -32,7 +32,7 @@
                 </div>
             </li>
             <li>
-                <a href="#">บุคลากร</a>
+                <%= link_to("บุคลากร", organize_1_path) %>
                 <div class="container-1 left">
                     <ul class="ula">
                         <li><%= link_to("ปลัดเทศบาล", "organize_1") %></li>
