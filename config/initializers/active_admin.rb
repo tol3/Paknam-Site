@@ -18,18 +18,28 @@ ActiveAdmin.setup do |config|
   # Note: Recommended image height is 21px to properly fit in the header
   #
   # config.site_title_image = "/images/logo.png"
-  # config.namespace :admin do |admin|
-  #   admin.build_menu  do |menu|
-  #     menu.add :label => "Paknam Site", :url => "/", :priority => 0
+  config.namespace :admin do |admin|
+    admin.build_menu  do |menu|
+      # menu.add :label => "Paknam Site", :url => "/", :priority => 0
 
-  #     menu.add :label => "Dashboard", :url => "/admin", :priority => 1
-  #     menu.add :label => "ข่าวสาร ต่างๆ ", :url => "/admin/announcements", :priority => 2
-  #     menu.add :label => "หนังสือ และ รายงาน", :url => "/admin/documents", :priority => 3
-  #     menu.add :label => "กิจกรรม", :url => "/admin/events", :priority => 4
-  #     menu.add :label => "Admin User", :url => "/admin/admin_users", :priority => 5
+      # menu.add :label => "Dashboard", :url => "/admin", :priority => 1
+      # menu.add :label => "ข่าวสาร ต่างๆ ", :url => "/admin/announcements", :priority => 2
+      # menu.add :label => "หนังสือ และ รายงาน", :url => "/admin/documents", :priority => 3
+      # menu.add :label => "กิจกรรม", :url => "/admin/events", :priority => 4
+      # menu.add :label => "Admin User", :url => "/admin/admin_users", :priority => 5
 
-  #   end
-  # end
+      menu.add :label => "แผนผังองค์กร", :priority => 5 do |sites|
+        sites.add :label => "ปลัดเทศบาล", :url => "/admin/clerks", :priority => 0
+        sites.add :label => "คณะผู้บริหาร", :url => "/admin/managers", :priority => 1
+        sites.add :label => "สมาชิกสภา ทต.", :url => "/admin/councillors", :priority => 2
+        sites.add :label => "สำนักงานปลัด", :url => "/admin/person1s", :priority => 3
+        sites.add :label => "กองคลัง", :url => "/admin/person2s", :priority => 4
+        sites.add :label => "กองช่าง", :url => "/admin/person3s", :priority => 5
+        sites.add :label => "กองการศึกษา", :url => "/admin/person4s", :priority => 6
+        sites.add :label => "กองสาธารญสุข", :url => "/admin/person5s", :priority => 7
+      end
+    end
+  end
 
   # == Default Namespace
   #
