@@ -9,8 +9,8 @@ menu :label =>  "หนังสือ และ รายงาน", :priority 
   end
   
   # ["หนังสือราชกาล","รายงานประชุม","รายงานการเงิน"]
-  scope :'หนังสือราชกาล' do |task|
-    task.where('category = ?', "หนังสือราชกาล")
+  scope :'หนังสือราชการ' do |task|
+    task.where('category = ?', "หนังสือราชการ")
   end
   scope :'รายงานประชุม' do |task|
     task.where('category = ?', "รายงานประชุม")
@@ -61,7 +61,7 @@ menu :label =>  "หนังสือ และ รายงาน", :priority 
   form :html => {:multipart => true} do |f|
 
     f.inputs "Book Details" do
-      f.input :category, :as => :radio, :label => "Type of product", :collection => ["หนังสือราชกาล","รายงานประชุม","รายงานการเงิน"]
+      f.input :category, :as => :radio, :label => "Type of product", :collection => ["หนังสือราชการ","รายงานประชุม","รายงานการเงิน"]
     end
 
     f.inputs "Book Details" do

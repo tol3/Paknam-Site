@@ -11,8 +11,12 @@
      <div class="col-sm-10 col-sm-offset-1">   <p class="news">  <%= raw @doc.content %>  </p></div>
 </div>
 <div class="row">
-     <div class="col-sm-10 col-sm-offset-1">  <h4> <%= link_to("<i class='fa fa-file-pdf-o fix-i'></i> Download PDF".html_safe, @doc.file.url) %> </h4>
-     </div>
+	<% if @doc.file.url == nil %>
+    <% else %>
+	    <div class="col-sm-10 col-sm-offset-1">  
+	    <h4> <%= link_to("<i class='fa fa-file-pdf-o fix-i'></i> Download PDF".html_safe, @doc.file.url) %> </h4>
+	    </div>
+    <% end %>
 </div>
 <div class="row">
     <div class="col-sm-10 col-sm-10-offset-1">
