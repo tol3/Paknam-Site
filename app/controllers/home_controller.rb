@@ -6,6 +6,8 @@ class HomeController < ApplicationController
   end
 
   def index
+    @settings = Setting.first
+
   	@events = Event.where(publish: true).limit(3)
 
   	@news1 = Announcement.where('category = ? AND publish = ?', "ข่าวประชาสัมพันธ์", true).last

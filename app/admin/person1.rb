@@ -1,4 +1,4 @@
 ActiveAdmin.register Person1 do
 menu false
-actions :all, :except => [:new]
+actions :all, :except => [:new, :destroy]
 end
