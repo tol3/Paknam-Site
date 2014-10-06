@@ -2,9 +2,9 @@ class Announcement < ActiveRecord::Base
 
   scope :on , where(publish: true).order("created_at desc")
 
-  scope :info , where('category = ? AND publish = ?', "ข่าวประชาสัมพันธ์", true )
-  scope :buy , where('category = ? AND publish = ?', "ข่าวจัดซื้อ", true )
-  scope :job , where('category = ? AND publish = ?', "ข่าวสมัครงาน", true )
+  scope :info , where('category = ? AND publish = ?', "ข่าวประชาสัมพันธ์", true ).reverse_order
+  scope :buy , where('category = ? AND publish = ?', "ข่าวจัดซื้อ", true ).reverse_order
+  scope :job , where('category = ? AND publish = ?', "ข่าวสมัครงาน", true ).reverse_order
 
 	attr_accessible :title, :category, :file, :content, :publish
 

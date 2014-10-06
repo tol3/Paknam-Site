@@ -43,7 +43,7 @@ class ChartController < ApplicationController
   		c3 << Person3.find(e+1)
   	end
   	
-  	12.times.each do |e|
+  	10.times.each do |e|
   		c4 << Person4.find(e+1)
   	end
   	

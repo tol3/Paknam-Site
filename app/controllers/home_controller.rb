@@ -8,8 +8,6 @@ class HomeController < ApplicationController
   def index
     @settings = Setting.first
 
-  	@events = Event.where(publish: true).limit(3)
-
   	@news1 = Announcement.where('category = ? AND publish = ?', "ข่าวประชาสัมพันธ์", true).last
   	@news2 = Announcement.where('category = ? AND publish = ?', "ข่าวจัดซื้อ", true).last
   	@news3 = Announcement.where('category = ? AND publish = ?', "ข่าวสมัครงาน", true).last
