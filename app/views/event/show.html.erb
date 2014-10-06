@@ -10,7 +10,7 @@
 		  <ul class="slides">
 		    <% EventImage.where(event_id: @event.id).each do |e| %>
 				<li>
-					<%= image_tag(e.image.url) %>
+					<%= image_tag(e.image.url(:event)) %>
 				</li>
 			<% end %>
 		  </ul>
@@ -19,7 +19,7 @@
 		  <ul class="slides">
 		  	<% EventImage.where(event_id: @event.id).each do |e| %>
 				<li>
-					<%= image_tag(e.image.url) %>
+					<%= image_tag(e.image.url(:event_teaser)) %>
 				</li>
 			<% end %>
 		  </ul>

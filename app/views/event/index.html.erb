@@ -7,7 +7,7 @@
 	<% @events.each do |e| %>
 		<div class="col-sm-10 col-sm-offset-1 event line">
 			<div class="col-sm-5 event-img">
-				<%= link_to(image_tag(EventImage.find_by_event_id(e.id).image.url), event_path(e))  %>
+				<%= link_to(image_tag(EventImage.find_by_event_id(e.id).image.url(:event_teaser)), event_path(e))  %>
 			</div>
 
 			<div class="col-sm-7 event-content">

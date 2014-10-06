@@ -42,7 +42,16 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   version :slide do
     process :resize_and_pad => [290, 170,"#ffffff"]
-  end  
+  end
+
+  version :event_teaser do
+    process :resize_to_fit => [296, 174]
+  end
+
+  version :event do
+    process :resize_and_pad => [775, 517,"#ffffff"]
+  end
+
 
   def cache_dir
     'uploads/cache'
