@@ -1,6 +1,6 @@
 class EventController < ApplicationController
   def index
-  	@events = Event.where(publish: true).reverse_order
+  	@events = Event.where(publish: true).reverse_order.page(params[:page]).per(8)
   end
 
   def show

@@ -1,10 +1,10 @@
 class ReportController < ApplicationController
   def budget
-  	@docs = Document.finance
+  	@docs = Document.finance.page(params[:page]).per(10)
   end
 
   def conference
-  	@docs = Document.meeting
+  	@docs = Document.meeting.page(params[:page]).per(10)
   end
 
   def show
