@@ -18,6 +18,11 @@ class HomeController < ApplicationController
   end
 
   def sitemap
-    
   end
+
+  # def download
+  #   send_file pdf,
+  #   :filename => "แผนพัฒนาสามปี(พ.ศ.2558–2560).pdf",
+  #   :type => "application/pdf"
+  # end
 end
