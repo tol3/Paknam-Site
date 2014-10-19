@@ -1,11 +1,14 @@
 PaknamSiteV2::Application.routes.draw do
 
 
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  root :to => 'home#index'
+  root :to => 'splash#index'
 
+  # get "splash/index"
+  
   get "chart/manager"
   get "chart/councillor"
   get "chart/clerk"
@@ -30,6 +33,7 @@ PaknamSiteV2::Application.routes.draw do
   get "home/download"
 
 # home
+  match "home" => "home#index"
   match "contact" => "home#contact"
   match "vision" => "home#info"
   match "sitemap" => "home#sitemap"

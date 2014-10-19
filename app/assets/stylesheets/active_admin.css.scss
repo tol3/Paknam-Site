@@ -61,7 +61,18 @@ form.formtastic fieldset > ol > li.radio fieldset ol li {
     display: inline-block;
 }
 
+img.adminimg{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 50%;
+}
 
+tr#splash_1{
+	td.image{
+		max-width: 350px;
+	}
+}
 
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:

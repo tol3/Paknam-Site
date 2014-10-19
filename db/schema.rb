@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141005100457) do
+ActiveRecord::Schema.define(:version => 20141014065454) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -114,15 +114,6 @@ ActiveRecord::Schema.define(:version => 20141005100457) do
     t.datetime "created_at"
   end
 
-  create_table "manager_hierarchies", :id => false, :force => true do |t|
-    t.integer "ancestor_id",   :null => false
-    t.integer "descendant_id", :null => false
-    t.integer "generations",   :null => false
-  end
-
-  add_index "manager_hierarchies", ["ancestor_id", "descendant_id", "generations"], :name => "manager_anc_desc_udx", :unique => true
-  add_index "manager_hierarchies", ["descendant_id"], :name => "manager_desc_idx"
-
   create_table "managers", :force => true do |t|
     t.string   "avatar"
     t.string   "name"
@@ -175,9 +166,9 @@ ActiveRecord::Schema.define(:version => 20141005100457) do
     t.string   "avatar"
     t.string   "name"
     t.string   "officer"
+    t.string   "type"
     t.datetime "updated_at"
     t.datetime "created_at"
-    t.string   "type"
   end
 
   create_table "settings", :force => true do |t|
@@ -187,6 +178,14 @@ ActiveRecord::Schema.define(:version => 20141005100457) do
     t.string   "content"
     t.datetime "updated_at"
     t.datetime "created_at"
+  end
+
+  create_table "splashes", :force => true do |t|
+    t.string   "image"
+    t.boolean  "on"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+    t.string   "title"
   end
 
 end
