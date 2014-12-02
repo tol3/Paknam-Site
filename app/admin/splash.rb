@@ -1,6 +1,6 @@
 ActiveAdmin.register Splash do
 config.batch_actions = false
-actions :all, :except => [:new, :destroy, :show]
+actions :all, :except => [:new, :destroy]
 
 	index :title => "Splash"  do
 		column "Image", :image, :max_width => "300px" do |p|
