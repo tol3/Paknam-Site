@@ -1,4 +1,4 @@
-workers Integer(ENV['PUMA_WORKERS'] || 3)
+workers Integer(ENV['PUMA_WORKERS'] || 5)
 threads Integer(ENV['MIN_THREADS']  || 1), Integer(ENV['MAX_THREADS'] || 5)
 
 preload_app!
@@ -6,6 +6,8 @@ preload_app!
 rackup      DefaultRackup
 port        ENV['PORT']     || 5555
 environment ENV['RACK_ENV'] || 'production'
+
+pidfile '/root/domains/Paknam-Site/tmp/pids/puma.pid'
 
 on_worker_boot do
   # worker specific setup
