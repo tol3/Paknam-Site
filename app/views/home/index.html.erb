@@ -49,33 +49,57 @@
 	</div>
 
 	<div class="col-md-12 shot-link">
-		<div class="col-sm-4 " >
-			<%= link_to(image_tag("news.png", :class => "img-dummy"), information_path) %>
+		<div class="col-sm-4">
+			<% if @news1.cover.url != nil %>
+				<%= link_to(image_tag(@news1.cover.url, :class => "img-dummy"), information_path) %>
+			<% else %>
+				<%= link_to(image_tag("news.png", :class => "img-dummy"), information_path) %>
+			<% end %>
 			<h4> <%= link_to(@news1.title.truncate(30), news_path(@news1)) %> </h4>
 			<center><p class="sub"><%= @news1.category %></p></center>
 		</div>
-		<div class="col-sm-4" >
-			<%= link_to(image_tag("news.png", :class => "img-dummy"), purchasing_path) %>
+		<div class="col-sm-4">
+			<% if @news2.cover.url != nil %>
+				<%= link_to(image_tag(@news2.cover.url, :class => "img-dummy"), purchasing_path) %>
+			<% else %>
+				<%= link_to(image_tag("news.png", :class => "img-dummy"), purchasing_path) %>
+			<% end %>
 			<h4><%= link_to(@news2.title.truncate(30), news_path(@news2)) %></h4>
 			<center><p class="sub"><%= @news2.category %></p></center>
 		</div>
-		<div class="col-sm-4" >
-			<%= link_to(image_tag("news.png", :class => "img-dummy"), recruit_path) %>
+		<div class="col-sm-4">
+			<% if @news3.cover.url != nil %>
+				<%= link_to(image_tag(@news3.cover.url, :class => "img-dummy"), recruit_path) %>
+			<% else %>
+				<%= link_to(image_tag("news.png", :class => "img-dummy"), recruit_path) %>
+			<% end %>
 			<h4><%= link_to(@news3.title.truncate(30), news_path(@news3)) %></h4>
 			<center><p class="sub"><%= @news3.category %></p></center>
 		</div>
-		<div class="col-sm-4" >
-			<%= link_to(image_tag("reports.png", :class => "img-dummy"), forums_path) %>
+		<div class="col-sm-4">
+			<% if @doc1.cover.url != nil %>
+				<%= link_to(image_tag(@doc1.cover.url, :class => "img-dummy"), forums_path) %>
+			<% else %>
+				<%= link_to(image_tag("reports.png", :class => "img-dummy"), forums_path) %>
+			<% end %>
 			<h4><%= link_to(@doc1.title.truncate(30), forum_path(@doc1)) %></h4>
 			<center><p class="sub"><%= @doc1.category %></p></center>
 		</div>
-		<div class="col-sm-4" >
-			<%= link_to(image_tag("reports.png", :class => "img-dummy"), conference_path) %>
+		<div class="col-sm-4">
+			<% if @doc2.cover.url != nil %>
+				<%= link_to(image_tag(@doc2.cover.url, :class => "img-dummy"), conference_path) %>
+			<% else %>
+				<%= link_to(image_tag("reports.png", :class => "img-dummy"), conference_path) %>
+			<% end %>
 			<h4><%= link_to(@doc2.title.truncate(30), report_path(@doc2)) %></h4>
 			<center><p class="sub"><%= @doc2.category %></p></center>
 		</div>
-		<div class="col-sm-4" >
-			<%= link_to(image_tag("reports.png", :class => "img-dummy"), budget_path) %>
+		<div class="col-sm-4">
+			<% if @doc3.cover.url != nil %>
+				<%= link_to(image_tag(@doc3.cover.url, :class => "img-dummy"), budget_path) %>
+			<% else %>
+				<%= link_to(image_tag("reports.png", :class => "img-dummy"), budget_path) %>
+			<% end %>
 			<h4><%= link_to(@doc3.title.truncate(30), report_path(@doc3)) %></h4>
 			<center><p class="sub"><%= @doc3.category %></p></center>
 		</div>

@@ -23,7 +23,7 @@ menu :label =>  "หนังสือ และ รายงาน", :priority 
     selectable_column
 
     column "cover", :cover do |p|
-      if p.cover != ''
+      if p.cover.url != nil
         image_tag(p.cover.url(:thumb))
       else
         "No Picture"
@@ -50,7 +50,7 @@ menu :label =>  "หนังสือ และ รายงาน", :priority 
       attributes_table_for resource do
 
         row("cover") do
-          if resource.cover != ''
+          if resource.cover.url != nil
             image_tag(resource.cover.url(:thumb))
           else
             "No Picture"
