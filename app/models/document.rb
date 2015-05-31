@@ -7,11 +7,13 @@ class Document < ActiveRecord::Base
   scope :finance, where('category = ? AND publish = ?', "รายงานการเงิน", true ).reverse_order
   
 
-  attr_accessible :title, :category, :file, :publish
+  attr_accessible :title, :category, :file, :publish, :cover
 
   mount_uploader :file, FileUploader
+  mount_uploader :cover, ImageUploader
 	
   structure do
+    cover :string
     title   :string
     category :string
     file    :string

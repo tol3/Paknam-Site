@@ -22,6 +22,14 @@ menu :label =>  "หนังสือ และ รายงาน", :priority 
   index :title => "หนังสือ และ รายงาน" do
     selectable_column
 
+    column "cover", :cover do |p|
+      if p.cover != ''
+        image_tag(p.cover.url(:thumb))
+      else
+        "No Picture"
+      end
+    end
+
     column "title", :sortable => :title do |p|
       link_to p.title, admin_document_path(p)
     end
@@ -41,6 +49,14 @@ menu :label =>  "หนังสือ และ รายงาน", :priority 
     panel "Details" do
       attributes_table_for resource do
 
+        row("cover") do
+          if resource.cover != ''
+            image_tag(resource.cover.url(:thumb))
+          else
+            "No Picture"
+          end
+        end
+
         row("Title") { resource.title }
         row("category") { resource.category }
 
@@ -59,6 +75,10 @@ menu :label =>  "หนังสือ และ รายงาน", :priority 
   end
 
   form :html => {:multipart => true} do |f|
+
+    f.inputs "Cover" do
+      f.input :cover, :label => "Cover :"
+    end
 
     f.inputs "Book Details" do
       f.input :category, :as => :radio, :label => "Type of product", :collection => ["หนังสือราชการ","รายงานประชุม","รายงานการเงิน"]

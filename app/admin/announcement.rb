@@ -24,6 +24,14 @@ ActiveAdmin.register Announcement do
   index :title => "ข่าวสารต่าง ๆ"  do
     selectable_column
 
+    column "cover", :cover do |p|
+      if p.cover != ''
+        image_tag(p.cover.url(:thumb))
+      else
+        "No Picture"
+      end
+    end
+
     column "title", :sortable => :title do |p|
       link_to p.title, admin_announcement_path(p)
     end
@@ -42,6 +50,14 @@ ActiveAdmin.register Announcement do
   show do
     panel "Details" do
       attributes_table_for resource do
+
+        row("cover") do
+          if resource.cover != ''
+            image_tag(resource.cover.url(:thumb))
+          else
+            "No Picture"
+          end
+        end
 
         row("Title") { resource.title }
         row("category") { resource.category }
@@ -63,6 +79,10 @@ ActiveAdmin.register Announcement do
   end
 
   form :html => {:multipart => true} do |f|
+
+    f.inputs "Cover" do
+      f.input :cover, :label => "Cover :"
+    end
 
     f.inputs "News Category" do
       f.input :category, :as => :radio, :label => "Category", :collection => ["ข่าวประชาสัมพันธ์","ข่าวจัดซื้อ","ข่าวสมัครงาน"]
