@@ -1,4 +1,5 @@
 ActiveAdmin.register Splash do
+menu :label =>  "Splash Screen"
 config.batch_actions = false
 actions :all, :except => [:new, :destroy]
 
